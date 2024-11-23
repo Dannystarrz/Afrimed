@@ -5,6 +5,7 @@ import InputField from '../components/InputField'
 import Button from '../components/Button'
 import { appleLogo, facebookLogo, googleLogo } from '../icons'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 export default function page() {
 
@@ -12,8 +13,26 @@ export default function page() {
 
   return (
    <div className='w-full h-screen bg-[url("/onboardingBg.svg")] bg-cover bg-no-repeat flex items-center justify-center overflow-y-auto py-10'>
+      <div className="w-full h-screen flex justify-center items-center lg:hidden text-center bg-contain bg-center bg-no-repeat bg-[url('/doctor.png')]">
+        <div className="flex flex-col gap-3 items-center backdrop-blur-lg bg-white/50 w-full h-full px-4 justify-center">
+          <Image
+            src={"/AfrimedLogo.svg"}
+            alt="Afrimed logo"
+            height={32}
+            width={99}
+          />
+          <h2 className="font-bold text-2xl">Best Viewed on Desktop</h2>
+          <p className="font-medium text-base text-justify">
+            Thank you for visiting! Our website is currently optimized for
+            desktop viewing only. To experience the full functionality and
+            design, please access this site from a laptop or desktop computer.
+            We’re working to bring mobile compatibility soon—stay tuned for
+            updates!
+          </p>
+        </div>
+      </div>
 
-   <Form formStyle={'bg-white border border-[#F1F1F1] rounded-lg mt-[20rem] px-10 py-8 w-fit flex flex-col gap-4 items-center'}
+   <Form formStyle={'bg-white max-lg:hidden border border-[#F1F1F1] rounded-lg mt-[20rem] px-10 py-8 w-fit flex flex-col gap-4 items-center'}
    formHeader={'Welcome'}
    formSubHeading={'Sign in with your Afrimed account'}
    formLogo={"/AfrimedLogo.svg"}

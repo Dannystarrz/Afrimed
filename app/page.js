@@ -12,8 +12,28 @@ export default function Home() {
 
   return (
     <div className="w-full h-full bg-[#FCFCF7]">
-      <nav className="flex justify-between items-center px-12 py-6"
-      id="top"
+      <div className="w-full h-screen flex justify-center items-center lg:hidden text-center bg-contain bg-center bg-no-repeat bg-[url('/doctor.png')]">
+        <div className="flex flex-col gap-3 items-center backdrop-blur-lg bg-white/50 w-full h-full px-4 justify-center">
+          <Image
+            src={"/AfrimedLogo.svg"}
+            alt="Afrimed logo"
+            height={32}
+            width={99}
+          />
+          <h2 className="font-bold text-2xl">Best Viewed on Desktop</h2>
+          <p className="font-medium text-base text-justify">
+            Thank you for visiting! Our website is currently optimized for
+            desktop viewing only. To experience the full functionality and
+            design, please access this site from a laptop or desktop computer.
+            We’re working to bring mobile compatibility soon—stay tuned for
+            updates!
+          </p>
+        </div>
+      </div>
+
+      <nav
+        className="flex max-lg:hidden justify-between items-center px-12 py-6"
+        id="top"
       >
         <div className="flex gap-10 items-center">
           <Image
@@ -31,19 +51,22 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-center">
-          <button className="rounded-lg py-4 px-10 font-bold"
-          onClick={()=>navigate.push('/login')}
-          
-          >Login</button>
-          <button className="rounded-lg py-4 px-10 bg-[#5D34F3] font-bold text-[#FFFCFC]"
-          onClick={()=>navigate.push('/signUp')}
+          <button
+            className="rounded-lg py-4 px-10 font-bold"
+            onClick={() => navigate.push("/login")}
+          >
+            Login
+          </button>
+          <button
+            className="rounded-lg py-4 px-10 bg-[#5D34F3] font-bold text-[#FFFCFC]"
+            onClick={() => navigate.push("/signUp")}
           >
             Sign up
           </button>
         </div>
       </nav>
 
-      <div className="w-full pt-20 px-12 flex flex-col gap-8 items-center">
+      <div className="w-full max-lg:hidden pt-20 px-12 flex flex-col gap-8 items-center">
         <h1 className="text-center text-[48px] font-bold w-[70%] leading-tight">
           A world where{" "}
           <span className="text-[#5D34F3] font-medium italic ">healthcare</span>{" "}
@@ -71,38 +94,52 @@ export default function Home() {
           className="w-4/5 h-auto my-16"
         />
       </div>
-      <div className="w-full flex flex-col gap-24 items-center">
+      <div className="w-full max-lg:hidden flex flex-col gap-24 items-center">
         <div className="flex flex-col items-center">
           <h3>Key benefits of AriMed</h3>
           <h2 className="font-bold text-[36px]">Features</h2>
         </div>
 
         <div className="flex gap-6 w-full px-12 items-center mb-16 max-h-fit">
-
-          <KeyBenefits svgSource={'/AI.svg'} altText={'ai logo'}
-          header={'AI-Powered Chatbot'}
-          description={'Leverage AI chat to augment diagnostic capabilities, leading to quicker and more accurate assessments.'}
-          />
-          
-          <KeyBenefits svgSource={'/VideoAndCall.svg'} altText={'video and call logo'} 
-          header={'Video and Call Consultations'}
-          description={'Benefit from the convenience of remote consultations without compromising the quality of medical care.'}
+          <KeyBenefits
+            svgSource={"/AI.svg"}
+            altText={"ai logo"}
+            header={"AI-Powered Chatbot"}
+            description={
+              "Leverage AI chat to augment diagnostic capabilities, leading to quicker and more accurate assessments."
+            }
           />
 
-          <KeyBenefits svgSource={'/Message.svg'} altText={'message logo'} 
-          header={'Secure Messaging'}
-          description={'Discuss non-urgent matter all within a private and secure messaging environment.'}
+          <KeyBenefits
+            svgSource={"/VideoAndCall.svg"}
+            altText={"video and call logo"}
+            header={"Video and Call Consultations"}
+            description={
+              "Benefit from the convenience of remote consultations without compromising the quality of medical care."
+            }
           />
-          
-          <KeyBenefits svgSource={'/Lock.svg'} altText={'Lock logo'} 
-          header={'Electronic Health Record'}
-          description={'Doctors benefit from quick access to comprehensive patient data, allowing for more informed and personalized consultations.'}
+
+          <KeyBenefits
+            svgSource={"/Message.svg"}
+            altText={"message logo"}
+            header={"Secure Messaging"}
+            description={
+              "Discuss non-urgent matter all within a private and secure messaging environment."
+            }
           />
-          
+
+          <KeyBenefits
+            svgSource={"/Lock.svg"}
+            altText={"Lock logo"}
+            header={"Electronic Health Record"}
+            description={
+              "Doctors benefit from quick access to comprehensive patient data, allowing for more informed and personalized consultations."
+            }
+          />
         </div>
       </div>
 
-      <section className="flex w-full justify-between items-center px-16 py-16">
+      <section className="flex max-lg:hidden w-full justify-between items-center px-16 py-16">
         <div className="w-fit h-fit relative">
           <Image
             src={"/Hero Pict.png"}
@@ -186,7 +223,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex">
+      <section className="w-full flex max-lg:hidden">
         <div className="bg-[#F2F6FA] w-1/2 pl-12 py-10 flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <Image
@@ -214,7 +251,7 @@ export default function Home() {
         <div className="bg-[url('/scanimage.png')] bg-no-repeat bg-center bg-cover w-1/2 min-h-full"></div>
       </section>
 
-      <section className="flex w-full">
+      <section className="flex w-full max-lg:hidden">
         <div className="w-1/2 relative flex flex-row-reverse py-24">
           <Image
             width={388}
@@ -258,7 +295,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative text-white py-16 my-24 inset-0 transform -skew-y-3 bg-[#5D34F3]">
+      <section className="relative max-lg:hidden text-white py-16 my-24 inset-0 transform -skew-y-3 bg-[#5D34F3]">
         <div className="relative flex justify-around items-center max-w-5xl mx-auto px-4">
           {/* Each stat item */}
           <div className="text-center">
@@ -280,106 +317,125 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full px-12 flex flex-col gap-16 pt-5 items-center">
-          <p className="font-bold text-[2rem] text-[#252424]">
-            Meet some of Our
-            <span className="italic text-[#5D34F3] font-normal">
-              best Doctors
-            </span>
-          </p>
-          <div className="w-full flex justify-between">
-            <BestDoctorsCard imageSource={'/doc1.png'}/>
-            <BestDoctorsCard imageSource={'/doc2.png'}/>
-            <BestDoctorsCard imageSource={'/doc3.png'}/>
-            <BestDoctorsCard imageSource={'/doc4.png'}/>
-          </div>
-      </section>
-
-      <section className="w-full px-12 flex mt-16 flex-col gap-10 pt-16 items-center">
-
-      <p className="font-bold text-[2rem] text-[#252424]">Testimonials</p>
-
-      <div className="w-full flex px-8 py-4 gap-8 overflow-x-auto">
-
-        <TestimonialCard style={'p-6 w-[80%] flex shadow-md flex-col gap-10 bg-white rounded'}/>
-        <TestimonialCard style={'p-6 w-[80%] flex shadow-md flex-col gap-10 bg-white rounded'}/>
-        <TestimonialCard style={'p-6 w-[80%] flex shadow-md flex-col gap-10 bg-white rounded'}/>
-
-      </div>
-
-      <div className="flex">
-
-      </div>
-
-      </section>
-
-      <section className="w-full py-16 flex mt-32 flex-col gap-8 items-center bg-[#5D34F3]">
-        <p className="text-white text-2xl font-semibold">Subscribe toAfriMed Newsletter</p>
-        <div className="flex w-[35%] h-fit rounded overflow-hidden">
-          <input
-          className="grow pl-5 bg-[#F6F6F64D] placeholder-white"
-          placeholder="Enter your email address"
-          />
-          <button className="font-normal text-base text-white py-4 px-7 w-fit bg-[#2C1E60]">Subscribe</button>
+      <section className="w-full max-lg:hidden px-12 flex flex-col gap-16 pt-5 items-center">
+        <p className="font-bold text-[2rem] text-[#252424]">
+          Meet some of Our
+          <span className="italic text-[#5D34F3] font-normal">
+            best Doctors
+          </span>
+        </p>
+        <div className="w-full flex justify-between">
+          <BestDoctorsCard imageSource={"/doc1.png"} />
+          <BestDoctorsCard imageSource={"/doc2.png"} />
+          <BestDoctorsCard imageSource={"/doc3.png"} />
+          <BestDoctorsCard imageSource={"/doc4.png"} />
         </div>
       </section>
 
-      <footer className="bg-[#221B3B] flex flex-col gap-16 px-16 pt-16">
+      <section className="w-full max-lg:hidden px-12 flex mt-16 flex-col gap-10 pt-16 items-center">
+        <p className="font-bold text-[2rem] text-[#252424]">Testimonials</p>
+
+        <div className="w-full flex px-8 py-4 gap-8 overflow-x-auto">
+          <TestimonialCard
+            style={
+              "p-6 w-[80%] flex shadow-md flex-col gap-10 bg-white rounded"
+            }
+          />
+          <TestimonialCard
+            style={
+              "p-6 w-[80%] flex shadow-md flex-col gap-10 bg-white rounded"
+            }
+          />
+          <TestimonialCard
+            style={
+              "p-6 w-[80%] flex shadow-md flex-col gap-10 bg-white rounded"
+            }
+          />
+        </div>
+
+        <div className="flex"></div>
+      </section>
+
+      <section className="w-full max-lg:hidden py-16 flex mt-32 flex-col gap-8 items-center bg-[#5D34F3]">
+        <p className="text-white text-2xl font-semibold">
+          Subscribe toAfriMed Newsletter
+        </p>
+        <div className="flex w-[35%] h-fit rounded overflow-hidden">
+          <input
+            className="grow pl-5 bg-[#F6F6F64D] placeholder-white"
+            placeholder="Enter your email address"
+          />
+          <button className="font-normal text-base text-white py-4 px-7 w-fit bg-[#2C1E60]">
+            Subscribe
+          </button>
+        </div>
+      </section>
+
+      <footer className="bg-[#221B3B] max-lg:hidden flex flex-col gap-16 px-16 pt-16">
         <div className="flex items-center justify-between">
           <Image
-              src={"/AfrimedLogo.svg"}
-              alt="Afrimed logo"
-              height={32}
-              width={99}
-            />
+            src={"/AfrimedLogo.svg"}
+            alt="Afrimed logo"
+            height={32}
+            width={99}
+          />
 
           <div className="flex items-center gap-32">
-            
             <div className="flex flex-col gap-3">
               <p className="text-white text-base font-bold mb-2">Services</p>
-              <p className="font-light text-sm text-white">AI-Powered Chatbot (AI Medic)</p>
-              <p className="font-light text-sm text-white">Virtual Consultations</p>
-              <p className="font-light text-sm text-white">Appointment Management</p>
+              <p className="font-light text-sm text-white">
+                AI-Powered Chatbot (AI Medic)
+              </p>
+              <p className="font-light text-sm text-white">
+                Virtual Consultations
+              </p>
+              <p className="font-light text-sm text-white">
+                Appointment Management
+              </p>
               <p className="font-light text-sm text-white">Secure Messaging</p>
             </div>
-            
+
             <div className="flex flex-col gap-3">
               <p className="text-white text-base font-bold mb-2">Legal</p>
-              <p className="font-light text-sm text-white">Terms and conditions </p>
+              <p className="font-light text-sm text-white">
+                Terms and conditions{" "}
+              </p>
               <p className="font-light text-sm text-white">Privacy</p>
               <p className="font-light text-sm text-white">Support</p>
             </div>
-            
+
             <div className="flex flex-col gap-3">
               <p className="text-white text-base font-bold mb-2">About Us</p>
-              <p className="font-light text-sm text-white">Email: afrimed@gmail.com</p>
-              <p className="font-light text-sm text-white">Contact: 08000098967 </p>
+              <p className="font-light text-sm text-white">
+                Email: afrimed@gmail.com
+              </p>
+              <p className="font-light text-sm text-white">
+                Contact: 08000098967{" "}
+              </p>
             </div>
-
           </div>
-
         </div>
         <div className="flex w-full border-t py-5 border-white justify-between">
-          
           <div className="flex gap-4 items-center mb-2">
             <p className="text-white text-base font-bold">Connect with us</p>
             <div className="flex gap-2 items-center">
               {xLogo} {instaLogo} {linkedInLogo}
             </div>
           </div>
-          
-          <p className="font-light text-sm text-white">Copyright ©afrimed. 2024. All right reserved</p>
 
-          <a className="flex items-center gap-2 hover:cursor-pointer"
-          href="#top"
+          <p className="font-light text-sm text-white">
+            Copyright ©afrimed. 2024. All right reserved
+          </p>
+
+          <a
+            className="flex items-center gap-2 hover:cursor-pointer"
+            href="#top"
           >
             <p className="font-light text-sm text-white">Back to Top</p>
-            { backToTopIcon }
+            {backToTopIcon}
           </a>
-
         </div>
       </footer>
-
     </div>
   );
 }
