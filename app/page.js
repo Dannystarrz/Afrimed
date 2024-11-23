@@ -50,15 +50,15 @@ export default function Home() {
             <p className="hover:text-[#5D34F3] hover:underline">Testimonials</p>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <button
-            className="rounded-lg py-4 px-10 font-bold"
+            className="rounded-lg py-4 px-10 font-bold hover:bg-[#E8E2FD]"
             onClick={() => navigate.push("/login")}
           >
             Login
           </button>
           <button
-            className="rounded-lg py-4 px-10 bg-[#5D34F3] font-bold text-[#FFFCFC]"
+            className="rounded-lg py-4 px-10 bg-[#5D34F3] font-bold text-[#FFFCFC] hover:bg-[#3A0DDE]"
             onClick={() => navigate.push("/signUp")}
           >
             Sign up
@@ -78,10 +78,10 @@ export default function Home() {
           revolutionizing the way you access healthcare.
         </p>
         <div className="flex items-center gap-6">
-          <button className="rounded-lg py-4 px-10 bg-[#5D34F3] font-bold text-[#FFFCFC] text-[20px]">
+          <button className="rounded-lg py-4 px-10 bg-[#5D34F3] hover:bg-[#3A0DDE] font-bold text-[#FFFCFC] text-[20px]">
             Join now
           </button>
-          <button className="rounded-lg py-4 px-10 font-bold border border-[#5D34F3] text-[#5D34F3] text-[20px]">
+          <button className="rounded-lg py-4 px-10 font-bold border hover:bg-[#E8E2FD] border-[#5D34F3] text-[#5D34F3] text-[20px]">
             Get your heart result classification
           </button>
         </div>
@@ -224,7 +224,7 @@ export default function Home() {
       </section>
 
       <section className="w-full flex max-lg:hidden">
-        <div className="bg-[#F2F6FA] w-1/2 pl-12 py-10 flex flex-col gap-2">
+        <div className="bg-[#F2F6FA] w-1/2 pl-12 py-10 flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <Image
               src={"/Waving20hand.svg"}
@@ -244,7 +244,7 @@ export default function Home() {
             fill a fom and get your heart classification.
           </p>
 
-          <button className="rounded-lg py-4 px-10 bg-[#5D34F3] w-fit font-bold text-[#FFFCFC] text-[20px]">
+          <button className="rounded-lg py-4 px-10 bg-[#5D34F3] hover:bg-[#3A0DDE] w-fit font-bold text-[#FFFCFC] text-[20px]">
             Try it for free
           </button>
         </div>
@@ -285,10 +285,10 @@ export default function Home() {
             experience a revolutionary approach to healthcare.
           </p>
           <div className="flex w-full gap-6">
-            <button className="rounded-lg py-3 px-10 bg-[#5D34F3] font-bold text-[#FFFCFC] text-[20px]">
+            <button className="rounded-lg py-3 px-10 bg-[#5D34F3] hover:bg-[#3A0DDE] font-bold text-[#FFFCFC] text-[20px]">
               Get started
             </button>
-            <button className="rounded-lg py-3 px-10 font-bold border border-[#5D34F3] text-[#5D34F3] text-[20px]">
+            <button className="rounded-lg py-3 px-10 font-bold border border-[#5D34F3] hover:bg-[#E8E2FD] text-[#5D34F3] text-[20px]">
               Login
             </button>
           </div>
@@ -365,7 +365,7 @@ export default function Home() {
             className="grow pl-5 bg-[#F6F6F64D] placeholder-white"
             placeholder="Enter your email address"
           />
-          <button className="font-normal text-base text-white py-4 px-7 w-fit bg-[#2C1E60]">
+          <button className="font-normal text-base text-white py-4 px-7 w-fit bg-[#2C1E60] hover:bg-[#442E94]">
             Subscribe
           </button>
         </div>
@@ -380,7 +380,7 @@ export default function Home() {
             width={99}
           />
 
-          <div className="flex items-center gap-32">
+          <div className="flex gap-32">
             <div className="flex flex-col gap-3">
               <p className="text-white text-base font-bold mb-2">Services</p>
               <p className="font-light text-sm text-white">
@@ -415,7 +415,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex w-full border-t py-5 border-white justify-between">
+        <div className="flex w-full border-t py-5 border-white items-center justify-between">
           <div className="flex gap-4 items-center mb-2">
             <p className="text-white text-base font-bold">Connect with us</p>
             <div className="flex gap-2 items-center">
@@ -428,10 +428,10 @@ export default function Home() {
           </p>
 
           <a
-            className="flex items-center gap-2 hover:cursor-pointer"
+            className="flex items-center gap-2 hover:cursor-pointer group"
             href="#top"
           >
-            <p className="font-light text-sm text-white">Back to Top</p>
+            <p className="font-light text-sm text-white group-hover:font-normal">Back to Top</p>
             {backToTopIcon}
           </a>
         </div>
