@@ -12,8 +12,8 @@ export default function page() {
    const navigate = useRouter()
 
   return (
-   <div className='w-full h-screen bg-[url("/onboardingBg.svg")] bg-cover bg-no-repeat flex items-center justify-center overflow-y-auto py-10'>
-      <div className="w-full h-screen flex justify-center items-center lg:hidden text-center bg-contain bg-center bg-no-repeat bg-[url('/doctor.png')]">
+   <div className='w-full h-screen bg-[url("/onboardingBg.svg")] bg-cover bg-no-repeat flex items-center justify-center overflow-y-auto md:py-10 py-5'>
+      {/* <div className="w-full h-screen flex justify-center items-center lg:hidden text-center bg-contain bg-center bg-no-repeat bg-[url('/doctor.png')]">
         <div className="flex flex-col gap-3 items-center backdrop-blur-lg bg-white/50 w-full h-full px-4 justify-center">
           <Image
             src={"/AfrimedLogo.svg"}
@@ -30,9 +30,9 @@ export default function page() {
             updates!
           </p>
         </div>
-      </div>
+      </div> */}
 
-   <Form formStyle={'bg-white max-lg:hidden border border-[#F1F1F1] rounded-lg mt-[20rem] px-10 py-8 w-fit flex flex-col gap-4 items-center'}
+   <Form formStyle={'bg-white border border-[#F1F1F1] rounded-lg md:mt-[20rem] mt-[14rem] md:px-10 px-6 py-8 w-fit flex flex-col gap-4 items-center'}
    formHeader={'Welcome'}
    formSubHeading={'Sign in with your Afrimed account'}
    formLogo={"/AfrimedLogo.svg"}
@@ -58,7 +58,7 @@ export default function page() {
          >Don’t have an account? <span className='text-[#5D34F3]'>Create Account</span></p>
 
       <div className='relative w-[90%] border-b my-10'>
-         <p className='absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white px-2'>Or continue with</p>
+         <p className='absolute -bottom-3 left-1/2 text-nowrap -translate-x-1/2 bg-white px-2'>Or continue with</p>
       </div>
       <div className='flex flex-col gap-4 w-full items-center'>
          <Button 

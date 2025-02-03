@@ -3,7 +3,8 @@ import Image from 'next/image';
 
 export default function KeyBenefits({svgSource, altText, header, description}) {
   return (
-   <div className="rounded-lg group shadow-md hover:bg-[#5D34F3] py-10 px-5 w-1/4 h-[262px] flex flex-col gap-4">
+   <div className="rounded-lg group shadow-md hover:bg-[#5D34F3] md:py-10 py-5
+    px-5 md:w-1/4 w-full md:h-[262px] h-[220px] flex flex-col md:gap-4 gap-2 justify-center">
    <Image
      src={svgSource}
      alt={altText}

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function InputField({labelText, inputStyle, onchangeFunction}) {
   return (
-    <div className='w-[24.5625rem] rounded-lg border border-[#1B1D21] opacity-30 bg-[#F3F2F2] relative'>
+    <div className='md:w-[24.5625rem] w-[280px] rounded-lg border border-[#1B1D21] opacity-30 bg-[#F3F2F2] relative'>
       <input
       className={inputStyle||'w-full py-4 pl-4 rounded-lg text-black'}
       onChange={onchangeFunction}

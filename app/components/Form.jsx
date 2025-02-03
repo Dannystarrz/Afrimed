@@ -19,9 +19,9 @@ export default function Form({children, formStyle, submitFunction, formHeader, f
                width={formLogoWeight||99}
                onClick={()=>navigate.push('/')}
                />)}
-      <div className='flex flex-col items-center mb-6'>
-         <p className='text-2xl font-medium text-[#272728]'>{formHeader||'header here'}</p>
-         <p className='font-normal text-base text-[#575758]'>{formSubHeading||'sub-heading here'}</p>
+      <div className='flex flex-col items-center md:mb-6 mb-4'>
+         <p className='md:text-2xl text-xl font-medium text-[#272728]'>{formHeader||'header here'}</p>
+         <p className='font-normal md:text-base text-md text-[#575758]'>{formSubHeading||'sub-heading here'}</p>
       </div>
       {children}
       
