@@ -298,7 +298,7 @@ export default function Home() {
             >
               Get started
             </button>
-            <button className="rounded-lg py-3 md:px-10 font-bold border border-[#5D34F3] hover:bg-[#E8E2FD] text-[#5D34F3] text-[20px] text-[16px]"
+            <button className="rounded-lg py-3 md:px-10 font-bold border border-[#5D34F3] hover:bg-[#E8E2FD] text-[#5D34F3] md:text-[20px] text-[16px]"
             onClick={()=>{navigate.push('/login')}}
             >
               Login
