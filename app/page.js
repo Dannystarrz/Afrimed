@@ -80,10 +80,14 @@ export default function Home() {
           revolutionizing the way you access healthcare.
         </p>
         <div className="flex max-md:flex-col max-md:pt-12 items-center md:gap-6 gap-3">
-          <button className="rounded-lg md:py-4 py-2 md:px-10 px-5 bg-[#5D34F3] hover:bg-[#3A0DDE] font-bold text-[#FFFCFC] md:text-[20px] text-[14px]">
+          <button className="rounded-lg md:py-4 py-2 md:px-10 px-5 bg-[#5D34F3] hover:bg-[#3A0DDE] font-bold text-[#FFFCFC] md:text-[20px] text-[14px]"
+          onClick={()=>{navigate.push('/signUp')}}
+          >
             Join now
           </button>
-          <button className="rounded-lg md:py-4 py-2 md:px-10 px-5 font-bold border hover:bg-[#E8E2FD] border-[#5D34F3] text-[#5D34F3] md:text-[20px] text-[14px]">
+          <button className="rounded-lg md:py-4 py-2 md:px-10 px-5 font-bold border hover:bg-[#E8E2FD] border-[#5D34F3] text-[#5D34F3] md:text-[20px] text-[14px]"
+          onClick={()=>{navigate.push('/login')}}
+          >
             Get your heart result classification
           </button>
         </div>
@@ -246,7 +250,9 @@ export default function Home() {
             fill a fom and get your heart classification.
           </p>
 
-          <button className="rounded-lg md:py-4 py-2 md:px-10 px-5 bg-[#5D34F3] hover:bg-[#3A0DDE] w-fit font-bold text-[#FFFCFC] md:text-[20px] text-[16px]">
+          <button className="rounded-lg md:py-4 py-2 md:px-10 px-5 bg-[#5D34F3] hover:bg-[#3A0DDE] w-fit font-bold text-[#FFFCFC] md:text-[20px] text-[16px]"
+          onClick={()=>{navigate.push('/signUp')}}
+          >
             Try it for free
           </button>
         </div>
@@ -287,10 +293,14 @@ export default function Home() {
             experience a revolutionary approach to healthcare.
           </p>
           <div className="flex max-md:flex-col w-full md:gap-6 gap-3">
-            <button className="rounded-lg py-3 md:px-10 bg-[#5D34F3] hover:bg-[#3A0DDE] font-bold text-[#FFFCFC] md:text-[20px] text-[16px]">
+            <button className="rounded-lg py-3 md:px-10 bg-[#5D34F3] hover:bg-[#3A0DDE] font-bold text-[#FFFCFC] md:text-[20px] text-[16px]"
+            onClick={()=>{navigate.push('/signUp')}}
+            >
               Get started
             </button>
-            <button className="rounded-lg py-3 md:px-10 font-bold border border-[#5D34F3] hover:bg-[#E8E2FD] text-[#5D34F3] text-[20px] text-[16px]">
+            <button className="rounded-lg py-3 md:px-10 font-bold border border-[#5D34F3] hover:bg-[#E8E2FD] text-[#5D34F3] text-[20px] text-[16px]"
+            onClick={()=>{navigate.push('/login')}}
+            >
               Login
             </button>
           </div>
